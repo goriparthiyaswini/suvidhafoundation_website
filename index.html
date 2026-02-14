@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suvidha Foundation</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f5f5f5;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    /* Left Section */
+    .left {
+      width: 40%;
+      background: linear-gradient(-45deg, #6f8f72, #4a6b5d, #89a98b, #5c7c66);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      padding: 50px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #fff;
+      box-shadow: 4px 0 20px rgba(0,0,0,0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Gradient Animation */
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Logo + Title Block */
+    .header-block {
+      text-align: left;
+      opacity: 0;
+      animation: fadeInDown 1.2s ease forwards;
+    }
+
+    .header-block img {
+      width: 220px;
+      display: block;
+      margin-bottom: 15px;
+      filter: drop-shadow(2px 2px 8px rgba(0,0,0,0.4));
+    }
+
+    .header-block h1 {
+      font-size: 32px;
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .header-block h2 {
+      font-size: 20px;
+      margin: 6px 0 0;
+      font-weight: 600;
+      opacity: 0.9;
+    }
+
+    /* Subtitle (tagline) */
+    .subtitle {
+      margin-top: 20px;
+      font-size: 16px;
+      font-style: italic;
+      line-height: 1.6;
+      opacity: 0;
+      animation: fadeInUp 1.5s ease forwards;
+    }
+
+    /* Explore Button - Centered */
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+    }
+
+    .btn {
+      background: #2e6b3e;
+      color: white;
+      border: none;
+      padding: 14px 34px;
+      font-size: 16px;
+      border-radius: 40px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .btn:hover {
+      background: #1e4d2a;
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0px 6px 18px rgba(0,0,0,0.4);
+    }
+
+    /* Right Section */
+    .right {
+      width: 60%;
+      background: url('background.png') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .right::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.25);
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left, .right {
+        width: 100%;
+        height: 50vh;
+        text-align: center;
+      }
+
+      .left {
+        padding: 30px;
+      }
+
+      .header-block img {
+        width: 150px;
+        margin: 0 auto 10px;
+      }
+
+      .header-block h1 {
+        font-size: 24px;
+      }
+
+      .header-block h2 {
+        font-size: 16px;
+      }
+
+      .subtitle {
+        font-size: 14px;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Left Section -->
+    <div class="left">
+      <!-- Logo + Title -->
+      <div class="header-block">
+        <img src="pho/SuvidhaLogo.png" alt="Suvidha Foundation Logo">
+        <h1>Suvidha Foundation</h1>
+        <h2>Suvidha Mahila Mandal</h2>
+        <!-- Subtitle -->
+        <div class="subtitle">
+          🌱 Small steps, big impact.<br>
+          ✨ Be a part of the change.
+        </div>
+      </div>
+
+      <!-- Button in Middle -->
+      <div class="btn-container">
+        <button class="btn" onclick="window.location.href='mainpage.html'">Explore</button>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right"></div>
+  </div>
+</body>
+</html>
+
+
+

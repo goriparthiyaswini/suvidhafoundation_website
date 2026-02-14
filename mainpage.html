@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suvidha Foundation - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Ensure body takes full height for sticky footer */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background-color: #e6f0e6;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    header {
+      background-color: #2f5134;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 40px;
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffd966;
+    }
+
+    /* Content Section */
+    .content {
+      display: flex;
+      padding: 40px;
+      background-color: #a5bca2;
+      flex: 1; /* take remaining vertical space */
+    }
+
+    /* Left Info Section */
+    .left-section {
+      width: 45%;
+      padding-right: 30px;
+    }
+
+    .tabs {
+      margin-bottom: 15px;
+    }
+
+    .tabs button {
+      background: none;
+      border: none;
+      font-size: 16px;
+      font-weight: 600;
+      margin-right: 20px;
+      cursor: pointer;
+      color: #222;
+      transition: color 0.3s;
+    }
+
+    .tabs button:hover, .tabs button.active {
+      color: #2f5134;
+      text-decoration: underline;
+    }
+
+    .tab-content {
+      font-size: 15px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    .tab-content em {
+      color: #333;
+    }
+
+    /* Right Image Collage */
+    .right-section {
+      width: 55%;
+    }
+
+    .right-section img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2f5134;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      font-size: 14px;
+      flex-shrink: 0; /* Prevent shrinking */
+      position: sticky;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer a {
+      color: #ffd966;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="pho\SuvidhaLogo.png" alt="Suvidha Foundation Logo">
+    <nav>
+      <ul>
+        <li><a href="mainpage.html">Home</a></li>
+        <li><a href="event.html">Events</a></li>
+        <li><a href="gallary.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Content -->
+  <div class="content">
+    <!-- Left Section -->
+    <div class="left-section">
+      <div class="tabs">
+        <button class="tab-btn active" onclick="showTab('about')">About</button>
+        <button class="tab-btn" onclick="showTab('mission')">Mission</button>
+        <button class="tab-btn" onclick="showTab('vision')">Vision</button>
+      </div>
+
+      <div id="about" class="tab-content">
+        Suvidha Mahila Mandal, established on September 8, 1995, is a non-profit organization working to impart education among the financially challenged sections to help them realize parity in education and strength of little minds in building a promising future. The organization has provisions of student internships, student mentorship, and the scope to volunteer. Through these programs, the organization aims to achieve the vision of imparting innovative education that stays with the students forever and equips them for the unforeseen future.
+      </div>
+
+      <div id="mission" class="tab-content" style="display: none;">
+        Imparting Education: Suvidha Foundation strives to bridge the educational gap by providing access to quality education, particularly for underprivileged children and those facing financial challenges.
+
+Empowering Communities: We aim to empower individuals and communities through social awareness campaigns, healthcare initiatives, and vocational training programs.
+Building a Sustainable Future: The foundation actively promotes environmental sustainability through tree plantation drives and fostering greener practices.
+      </div>
+
+      <div id="vision" class="tab-content" style="display: none;">
+       <p>Suvidha Foundation envisions equal opportunities, quality education, and a sustainable future.</p>
+<p>Key Activities:</p>
+
+<p>.Education: Scholarships, internships, and mentorship programs.</p>
+<p>.Social Awareness: Campaigns on hygiene, healthcare, and sustainability.</p>
+<p>Healthcare: Affordable, quality healthcare access.</p>
+<p>Environment: Tree plantation drives for sustainability.</p>
+<p>Women Empowerment: Skill development and support initiatives.</p>
+      </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right-section">
+      <img src="pho/Gemini_Generated_Image_1l547q1l547q1l54.png" alt="Suvidha Foundation Activities">
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © <a href="#">Suvidha Foundation (Suvidha Mahila Mandal)</a>, All Rights Reserved.
+  </footer>
+
+  <script>
+    function showTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.style.display = 'none';
+      });
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      document.getElementById(tabId).style.display = 'block';
+      event.target.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
+
